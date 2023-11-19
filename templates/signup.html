@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<section class="p-3">
+  <h1>Sign UP!</h1>
+<form method="POST" action="/signup">
+  <div class="mb-3 d-flex">
+    <label for="exampleInputEmail1" class="form-label">email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="insert your email">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3 d-flex">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="name" class="form-control" id="name" name="name" placeholder="insert your name">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" id="password"  class="form-control">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form></section>
+{% endblock %}
